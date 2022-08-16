@@ -1,5 +1,5 @@
-let clock = document.getElementById("clock"); // Variable clock goes to  <h1 id="clock"></h1>
-let hexColor = document.getElementById("hexcode"); // Variable haxcolor goes to  <p id="hexcode"></p>
+const clock = document.getElementById("clock"); // Variable clock goes to  <h1 id="clock"></h1>
+const hexColor = document.getElementById("hexcode"); // Variable haxcolor goes to  <p id="hexcode"></p>
 
 function hexClock() {
   let time = new Date(); // Use new Date() to generate a new Date object containing the current date and time.
@@ -8,15 +8,15 @@ function hexClock() {
   let seconds = time.getSeconds().toString(); // getSeconds() returns the Seconds (0 to 59) of a date to the string.
 
   if (hours.length < 2) {
-    // when the hour will hit 23:59:59 it will be changed to 00:00:00
+    // when the hour will hit 23:59:59 it will type single digits numbers, to make the clock look better this add 0 infront of a single digit
     hours = "0" + hours;
   }
   if (minutes.length < 2) {
-    // when the minute reach XX:59:59 it will add +1 to the current hour displayed
+    // when the minute reach XX:59:59 it will type single digits numbers, to make the clock look better this add 0 infront of a single digit
     minutes = "0" + minutes;
   }
   if (seconds.length < 2) {
-    // When the seconds reach XX:XX:59 it will add +1 to the current minute displayed
+    // When the seconds reach XX:XX:59 it will type single digits numbers, to make the clock look better this add 0 infront of a single digit
     seconds = "0" + seconds;
   }
   let clockStr = hours + ":" + minutes + ":" + seconds; // the clock the user will see on the weppage.
@@ -31,7 +31,7 @@ hexClock(); //Run the function
 setInterval(hexClock, 1000); //The interval to change the time set to 1000 ms
 
 // Table
-let p1 = document.getElementById("printout");
+const p1 = document.getElementById("printout");
 for (let index = 1; index <= 10; index++) {
   // i = 1 | 10 is equal bigger than 1 by 10 units therefor it will make 10 tr elements
   let row = document.createElement("tr");
