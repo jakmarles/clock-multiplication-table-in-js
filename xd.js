@@ -2,7 +2,7 @@ const clock = document.getElementById("clock"); // Variable clock goes to  <h1 i
 const hexColor = document.getElementById("hexcode"); // Variable haxcolor goes to  <p id="hexcode"></p>
 
 function hexClock() {
-  let time = new Date(); // Use new Date() to generate a new Date object containing the current date and time.
+  const time = new Date(); // Use new Date() to generate a new Date object containing the current date and time.
   let hours = time.getHours().toString(); // getHours() returns the hour (0 to 23) of a date to the string.
   let minutes = time.getMinutes().toString(); // getMinutes() returns the Minutes (0 to 59) of a date to the string.
   let seconds = time.getSeconds().toString(); // getSeconds() returns the Seconds (0 to 59) of a date to the string.
@@ -19,8 +19,8 @@ function hexClock() {
     // When the seconds reach XX:XX:59 it will type single digits numbers, to make the clock look better this add 0 infront of a single digit
     seconds = "0" + seconds;
   }
-  let clockStr = hours + ":" + minutes + ":" + seconds; // the clock the user will see on the weppage.
-  let hexColorStr = "#" + hours + minutes + seconds; //Thats the current time made into hexcode for example 04:20:00 will be displayed as hexcode #042020
+  const clockStr = hours + ":" + minutes + ":" + seconds; // the clock the user will see on the weppage.
+  const hexColorStr = "#" + hours + minutes + seconds; //Thats the current time made into hexcode for example 04:20:00 will be displayed as hexcode #042020
 
   clock.textContent = clockStr; //display the string
   hexColor.textContent = hexColorStr; //Setting the time to act as hexcolor
