@@ -34,12 +34,14 @@ setInterval(hexClock, 1000); //The interval to change the time set to 1000 ms
 const p1 = document.getElementById("printout");
 for (let index = 1; index <= 10; index++) {
   // i = 1 | 10 is equal bigger than 1 by 10 units therefor it will make 10 tr elements
-  let row = document.createElement("tr");
+  const row = document.createElement("tr");
   for (let j = 1; j <= 10; j++) {
     // j = 1 | 10 is equal bigger than 1 by 10 units therefor it will make 10 td elements
-    let col = document.createElement("td");
+    const col = document.createElement("td");
     col.innerText = j + "*" + index + "=" + index * j; // Variable j = 1~10 * Variable index = 1~10 equal to Variable index * Variable j
     row.append(col); //paste into td element
   }
   p1.append(row); //paste into tr element
 }
+
+const myInterval = setInterval(() => console.log(hexColor.textContent), 1000); // each time the color hex change it prints it out in the console, dont ask me why i added that i have no clue..
