@@ -26,7 +26,7 @@ function hexClock() {
   hexColor.textContent = hexColorStr; //Setting the time to act as hexcolor
   document.body.style.background = hexColorStr; // changes the background color based on the hexcode the current time
 }
-
+const myInterval = setInterval(() => console.log(hexColor.textContent), 1000); // each time the color hex change it prints it out in the console, dont ask me why i added that i have no clue..
 hexClock(); //Run the function
 setInterval(hexClock, 1000); //The interval to change the time set to 1000 ms
 
@@ -43,5 +43,4 @@ for (let index = 1; index <= 10; index++) {
   }
   p1.append(row); //paste into tr element
 }
-
-const myInterval = setInterval(() => console.log(hexColor.textContent), 1000); // each time the color hex change it prints it out in the console, dont ask me why i added that i have no clue..
+ 
